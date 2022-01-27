@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AimComponent } from './components/aim/aim.component';
 import { TryComponent } from './components/try/try.component';
 import { ScienceComponent } from './components/science/science.component';
+import { WikiumInfoComponent } from './components/wikium-info/wikium-info.component';
 
 
 
@@ -10,7 +11,8 @@ import { ScienceComponent } from './components/science/science.component';
   declarations: [
     AimComponent,
     TryComponent,
-    ScienceComponent
+    ScienceComponent,
+    WikiumInfoComponent
   ],
   imports: [
     CommonModule

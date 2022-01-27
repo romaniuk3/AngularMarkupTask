@@ -12,14 +12,19 @@
     &-item__image {
         display: block;
         margin: 0 auto;
+        margin-bottom: 30px;
     }
     &-item__header {
         text-align: center;
     }
 }
 .list {
-    padding: 0px 40px;
+    padding: 0px 60px;
     color: orange;
+
+    &-item {
+        margin-bottom: 10px;
+    }
 
     &-item__text {
         color: black;
