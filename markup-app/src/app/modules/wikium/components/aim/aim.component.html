@@ -1,0 +1,11 @@
+<section class="cards">
+    <div class="cards-item" *ngFor="let person of people;">
+        <img class="cards-item__image" src="{{person.img}}" height="140" width="121" alt="">
+        <h3 class="cards-item__header">{{person.type}}</h3>
+        <ul class="list">
+            <li class="list-item"><span class="list-item list-item__text">{{person.services[0]}}</span></li>
+            <li class="list-item"><span class="list-item list-item__text">{{person.services[1]}}</span></li>
+        </ul>
+    </div>
+</section>
+<app-try></app-try>
