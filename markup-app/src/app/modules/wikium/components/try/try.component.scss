@@ -9,4 +9,9 @@
   margin: 0 auto;
   margin-top: 75px;
   margin-bottom: 75px;
+
+  &:hover {
+    cursor: pointer;
+    background-image: linear-gradient(259deg, #4801ff, #4801ff 48%, #4801ff);
+  }
 }

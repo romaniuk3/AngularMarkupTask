@@ -11,6 +11,11 @@
         box-shadow: 0 16px 40px 0 rgb(72 1 255 / 8%);
         border-radius: 16px;
         padding-bottom: 35px;
+
+        &:hover {
+            -webkit-box-shadow: 0 16px 40px 0 rgb(72 1 255 / 8%);
+            box-shadow: 0 30px 40px 0 rgb(72 1 255 / 15%);
+        }
     }
     &-item__image {
         display: block;
