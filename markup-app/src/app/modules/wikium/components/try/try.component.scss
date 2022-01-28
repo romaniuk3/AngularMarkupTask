@@ -1,5 +1,7 @@
+@import './variables.scss';
+
 .try {
-  background-image: linear-gradient(259deg, #ac32e4, #7918f2 48%, #4801ff);
+  background-image: $linearbg;
   color: white;
   padding: 15px 35px;
   font-weight: 900;
@@ -12,6 +14,6 @@
 
   &:hover {
     cursor: pointer;
-    background-image: linear-gradient(259deg, #4801ff, #4801ff 48%, #4801ff);
+    background-image: $hoverbg;
   }
 }

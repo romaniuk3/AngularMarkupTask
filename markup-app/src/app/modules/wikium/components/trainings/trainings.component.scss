@@ -1,14 +1,11 @@
+@import '../../mixins/wikium-info.scss';
+
 .trainings-info {
 
     &__amount {
-        margin: 0;
-        color: white;
-        font-weight: 900;
-        font-size: 80px;
+        @include amount;
     }
     &__description {
-        color: white;
-        font-size: 16px;
-        max-width: 250px;
+        @include description;        
     }
 }

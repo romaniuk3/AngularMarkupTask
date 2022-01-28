@@ -1,0 +1,11 @@
+@mixin amount {
+    margin: 0;
+    color: white;
+    font-weight: 900;
+    font-size: 80px;
+}
+@mixin description {
+    color: white;
+    font-size: 16px;
+    width: 250px;
+}

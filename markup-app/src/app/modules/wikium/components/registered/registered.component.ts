@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisteredComponent implements OnInit {
 
+  members: number = 0;
+
+  countMembers() {
+    setInterval(() => {
+      if(this.members < 18) {
+        this.members++;
+      }
+    }, 90);
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+    window.addEventListener('scroll', this.scroll, true);
+  }
+
+  scroll = (): void => {
+    if(scrollY >= 800) {
+      console.log(scrollY)
+      this.countMembers();
+    }
   }
 
 }
