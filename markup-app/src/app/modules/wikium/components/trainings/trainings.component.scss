@@ -1,0 +1,13 @@
+.trainings-info {
+
+    &__amount {
+        color: white;
+        font-weight: 900;
+        font-size: 80px;
+    }
+    &__description {
+        color: white;
+        font-size: 16px;
+        max-width: 250px;
+    }
+}

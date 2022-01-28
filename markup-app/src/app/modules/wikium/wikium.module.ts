@@ -4,6 +4,8 @@ import { AimComponent } from './components/aim/aim.component';
 import { TryComponent } from './components/try/try.component';
 import { ScienceComponent } from './components/science/science.component';
 import { WikiumInfoComponent } from './components/wikium-info/wikium-info.component';
+import { RegisteredComponent } from './components/registered/registered.component';
+import { TrainingsComponent } from './components/trainings/trainings.component';
 
 
 
@@ -12,14 +14,17 @@ import { WikiumInfoComponent } from './components/wikium-info/wikium-info.compon
     AimComponent,
     TryComponent,
     ScienceComponent,
-    WikiumInfoComponent
+    WikiumInfoComponent,
+    RegisteredComponent,
+    TrainingsComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
     AimComponent,
-    ScienceComponent 
+    ScienceComponent,
+    WikiumInfoComponent 
   ]
 })
 export class WikiumModule { }

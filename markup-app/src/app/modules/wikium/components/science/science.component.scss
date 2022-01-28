@@ -1,16 +1,22 @@
+.science-container {
+  background-color: #fcf9fe;
+}
 .science {
-    background-color: #fcf9fe;
-    padding-top: 100px;
-    display: flex;
-    justify-content: space-between;
-    
-    &-content {
-        align-self: center;
-        padding-right: 75px;
-        
-        &__header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+
+  &-content {
+    align-self: center;
+    padding-right: 50px;
+    margin-bottom: 35px;
+
+    &__header {
+      font-weight: 900;
+      font-size: 36px;
+      text-align: center;
     }
+  }
 }
