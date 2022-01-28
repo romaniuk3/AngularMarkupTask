@@ -8,32 +8,32 @@ import { Component, OnInit } from '@angular/core';
 export class TrainingsComponent implements OnInit {
 
   trainings: number = 0;
-  interval: any;
 
-  countTrainings() {
-      this.interval = setInterval(() => {
+  public countTrainings() {
+
+    let promise = new Promise((resolve, reject) => {
+      setInterval(() => {
         if(this.trainings < 6500) {
           this.trainings+=50;
           this.trainings++;
+        } else {
+          resolve(this.trainings);
         };
       }, 20);
-
-    setTimeout(() => {
+    });
+    promise.then(() => {
       this.trainings = 6500;
-    },500);
+    });
   }
+  
 
   constructor() { }
 
   ngOnInit(): void {
-    window.addEventListener('scroll', this.scroll, true);
+    window.addEventListener('scroll', () => {
+      if(scrollY >= 800) {
+        this.countTrainings();
+      }
+    });
   }
-
-  scroll = (): void => {
-    if(scrollY >= 800) {
-      console.log(scrollY)
-      this.countTrainings();
-    }
-  }
-
 }

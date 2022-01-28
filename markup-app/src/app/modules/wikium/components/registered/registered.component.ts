@@ -20,14 +20,10 @@ export class RegisteredComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    window.addEventListener('scroll', this.scroll, true);
+    window.addEventListener('scroll', () => {
+      if(scrollY >= 800) {
+        this.countMembers();
+      }
+    });
   }
-
-  scroll = (): void => {
-    if(scrollY >= 800) {
-      console.log(scrollY)
-      this.countMembers();
-    }
-  }
-
 }
