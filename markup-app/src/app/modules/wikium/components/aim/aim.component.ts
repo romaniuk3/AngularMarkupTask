@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataManagementService } from '../../services/data-management.service';
 
 @Component({
   selector: 'app-aim',
@@ -7,34 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AimComponent implements OnInit {
 
-  people = [
-    {
-    img: '../../../../../assets/icon-child.svg',
-    type: 'Children from 7 years',
-    services: [
-      'Interesting games that help to develop', 
-      'Contribute to the improvement of performance of the child at school'
-    ]
-    },
-    {
-      img: '../../../../../assets/icon-man.svg',
-      type: 'Adults',
-      services: [
-        'High working performance daily', 
-        'Protection against fatigue and stress'
-      ]
-    },
-      {
-        img: '../../../../../assets/icon-woman.svg',
-        type: 'Older generation',
-        services: [
-          'Prevention of attention, memory and thinking disorders', 
-          'Maintain clarity of mind regardless of age'
-        ]
-      },
-];
+  people: any;
 
-  constructor() { }
+  constructor(private dataManagementService: DataManagementService) {
+    this.people = this.dataManagementService.people;
+  }
 
   ngOnInit(): void {
   }

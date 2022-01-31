@@ -1,6 +1,6 @@
 <div class="registered">
     <div class="registered-info">
-        <h3 class="registered-info__amount">{{members}}</h3>
-        <p class="registered-info__description">registered members</p>
+        <h3 (click)="updateTitle()" class="registered-info__amount">{{members}}</h3>
+        <p class="registered-info__description">{{translation.membersDesc | letterSpacing}}</p>
     </div>
 </div>

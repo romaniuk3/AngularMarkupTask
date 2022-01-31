@@ -1,9 +1,14 @@
 <section class="wikium">
   <div class="wikium-info">
-    <h2 class="wikium-info wikium-info__header">Wikium</h2>
+    <h2 class="wikium-info wikium-info__header">{{title}}</h2>
     <div class="wikium-info wikium-info__content">
-      <app-registered></app-registered>
-      <app-trainings></app-trainings>
+      <app-registered
+        [translation]="translationObject"
+        (onTitleChange)="changeTitle()"
+      ></app-registered>
+      <app-trainings
+        [translation]="translationObject"
+      ></app-trainings>
     </div>
   </div>
 </section>

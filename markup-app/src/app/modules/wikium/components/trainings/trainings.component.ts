@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-trainings',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrainingsComponent implements OnInit {
 
+  @Input() translation: any;
   trainings: number = 0;
 
   public countTrainings() {
@@ -22,7 +23,7 @@ export class TrainingsComponent implements OnInit {
       }, 20);
     });
     promise.then(() => {
-      this.trainings = 6500;
+      this.trainings = this.translation.trainingsCount;
     });
   }
   

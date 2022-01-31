@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-registered',
@@ -9,12 +9,20 @@ export class RegisteredComponent implements OnInit {
 
   members: number = 0;
 
+  @Input() translation: any;
+  
+  @Output() onTitleChange = new EventEmitter();
+
   countMembers() {
     setInterval(() => {
-      if(this.members < 18) {
+      if(this.members < this.translation.membersCount) {
         this.members++;
       }
     }, 90);
+  }
+
+  updateTitle(){
+    this.onTitleChange.emit();
   }
 
   constructor() { }
